@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap');
+
+:root {
+  --primary-color: #4A00E0;
+  --primary-color-light: #8E2DE2;
+  --secondary-color: #03DAC6;
+  --background-color: #F4F7FC;
+  --error-color: #E74C3C;
+  --error-bg: #FDECEA;
+  --text-color: #333;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--background-color);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 640px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+  text-align: center;
+}
+
+h1 {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+/* Lista de instruções */
+ul {
+  text-align: left;
+  padding: 0;
+  list-style: none;
+}
+
+ul li {
+  background: var(--primary-color-light);
+  color: #fff;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 6px;
+}
+
+/* Estilo dos inputs e labels */
+form {
+  margin-top: 20px;
+}
+
+form label {
+  font-weight: 600;
+  font-size: 1em;
+  text-align: left;
+  display: block;
+}
+
+form input {
+  font-size: 18px;
+  height: 50px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  display: block;
+  margin-bottom: 15px;
+  transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+form input:focus {
+  border-color: var(--primary-color-light);
+  box-shadow: 0px 0px 8px rgba(142, 45, 226, 0.5);
+}
+
+/* Botão aprimorado */
+form button {
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 8px;
+  width: 100%;
+  text-transform: uppercase;
+  box-shadow: 0px 4px 6px rgba(74, 0, 224, 0.3);
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+form button:hover {
+  background: var(--primary-color-light);
+  transform: scale(1.05);
+}
+
+form button:active {
+  transform: scale(0.98);
+}
+
+/* Mensagens de erro melhoradas */
+.error-text {
+  font-size: 14px;
+  color: var(--error-color);
+  background: var(--error-bg);
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Layout responsivo */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+  }
+
+  form input {
+    font-size: 16px;
+    height: 45px;
+  }
+
+  form button {
+    font-size: 16px;
+    height: 45px;
+  }
+}
